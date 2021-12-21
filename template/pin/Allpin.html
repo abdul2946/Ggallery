@@ -1,0 +1,24 @@
+{% extends 'core\siteBase.html' %}
+{% load static %}
+{{block.super}}-All Pin
+{% block content %}
+<div class="col-md-9">
+    <div class="card-body">
+        <h3>All Pins</h3>
+        <br>
+        {% for i in pinNews %}
+        <div class="grid-container">
+            <div>
+                <img class='grid-item grid-item-1' src='{{i.pin.url}}' alt=''>
+                <p><a href="{% url 'pindetails' pk=i.id %}">{{i.heading}}</a></p>
+                 <p>By</p>
+                  <p>{{i.ownername}}</p>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock content %}
