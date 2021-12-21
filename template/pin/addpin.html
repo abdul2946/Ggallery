@@ -1,5 +1,5 @@
-{% extends 'core/sitebase.html' %} {% load static %} {{block.super}}-Add Pin {%
-block content %}
+{% extends 'core/sitebase.html' %} {% load static %} {{block.super}}-Add Pin 
+{%block content %}
 <div class="card">
   <div class="card-body">
     <form
@@ -52,7 +52,8 @@ block content %}
     </form>
   </div>
 </div>
-{% endblock content %} {% block script %}
+{% endblock content %} 
+{% block script %}
 <script>
   function readURL(input) {
     if (input.files && input.files[0]) {
